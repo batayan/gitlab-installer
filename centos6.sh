@@ -96,7 +96,7 @@ cd /home/git
 if [ ! -d gitlab-shell ]; then
     sudo -u git git clone https://github.com/gitlabhq/gitlab-shell.git
     cd gitlab-shell
-    sudo -u git git checkout v1.8.0
+    sudo -u git git checkout v1.9.3
     sudo -u git cp -v /home/git/gitlab-shell/config.yml.example /home/git/gitlab-shell/config.yml
     sed -i 's#^gitlab_url: "http://localhost/"$#gitlab_url: "http://127.0.0.1/"#' /home/git/gitlab-shell/config.yml
     sudo -u git ./bin/install
@@ -130,7 +130,7 @@ cd /home/git
 if [ ! -d gitlab ]; then
     sudo -u git git clone https://github.com/gitlabhq/gitlabhq.git gitlab
     cd gitlab
-    sudo -u git git checkout 6-5-stable
+    sudo -u git git checkout 6-8-stable
 
     sudo -u git cp -v config/gitlab.yml.example config/gitlab.yml
     sudo -u git cp -v config/unicorn.rb.example config/unicorn.rb
